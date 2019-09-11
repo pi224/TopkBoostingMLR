@@ -267,7 +267,7 @@ class AdaBoostOLMSurrogate:
 				ret[l] = -sum(1/(1+np.exp(s[l] - s[Y_complement])))
 			for r in Y_complement:
 				ret[r] = sum(1/(1+np.exp(s[Ylist] - s[r])))
-			return ret/normalize_const # full information stuff. We can't do this anymore
+			# return ret/normalize_const # full information stuff. We can't do this anymore
 			return ret
 		else:
 			ret = np.zeros(k)
